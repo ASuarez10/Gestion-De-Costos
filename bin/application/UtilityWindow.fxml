@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UtilityWindowController">
+   <children>
+      <Label layoutX="95.0" layoutY="49.0" text="Utilidad Operativa:" />
+      <TextField fx:id="Utility" layoutX="211.0" layoutY="45.0" />
+      <Button layoutX="429.0" layoutY="45.0" mnemonicParsing="false" text="Generar" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="240.0" layoutX="24.0" layoutY="113.0" stroke="BLACK" strokeType="INSIDE" width="550.0" />
+      <Line endX="421.0" layoutX="153.0" layoutY="190.0" startX="-129.0" />
+      <Line endX="32.0" endY="197.0" layoutX="215.0" layoutY="172.0" startX="32.0" startY="-43.0" />
+      <Label layoutX="95.0" layoutY="147.0" text="Estado">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="374.0" layoutY="147.0" text="Valor">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="224.0" text="Unidades monetarias" />
+      <Label layoutX="105.0" layoutY="291.0" text="Unidades" />
+      <Button layoutX="14.0" layoutY="370.0" mnemonicParsing="false" onAction="#backToMenu" text="Volver" />
+   </children>
+</Pane>

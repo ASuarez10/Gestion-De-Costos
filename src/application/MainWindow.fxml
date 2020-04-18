@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+   <children>
+      <Label layoutX="149.0" layoutY="14.0" prefHeight="72.0" prefWidth="302.0" text="Análisis de gestión">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="217.0" layoutY="93.0" mnemonicParsing="false" onAction="#seeProducts" prefHeight="49.0" prefWidth="114.0" text="Productos" />
+      <Button layoutX="217.0" layoutY="151.0" mnemonicParsing="false" onAction="#seeIndicator" prefHeight="49.0" prefWidth="114.0" text="Indicadores" />
+      <Button layoutX="217.0" layoutY="209.0" mnemonicParsing="false" onAction="#seeApalancamiento" prefHeight="49.0" prefWidth="114.0" text="Apalancamiento operativo" />
+      <Button layoutX="217.0" layoutY="269.0" mnemonicParsing="false" onAction="#seeUtility" prefHeight="49.0" prefWidth="114.0" text="Utilidad neta" />
+      <Button layoutX="217.0" layoutY="327.0" mnemonicParsing="false" onAction="#seeGraphics" prefHeight="49.0" prefWidth="114.0" text="Gráficos" />
+   </children>
+</Pane>
