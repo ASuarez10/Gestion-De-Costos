@@ -1,6 +1,7 @@
 package application;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -42,12 +43,13 @@ public class MainWindowController {
     }
     
     @FXML
-    void seeGraphics(ActionEvent event) {
+    void seeGraphics(Event event) {
     	try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphicsWindow.fxml"));
 			Parent root = (Parent) loader.load();
 			root.getStylesheets().add("application.css");// CSS
 			GraphicsWindowController nc = loader.getController();
+			nc.graficar(100000.0/1000, 6.0, 12.0/1000);
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			stage.setScene(new Scene(root));
 
