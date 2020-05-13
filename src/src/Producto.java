@@ -97,21 +97,19 @@ public class Producto {
 		return (getPrecio())*getCantidades();
 	}
 	
-	public double costeM() {
+	public double mc() {
 		return (getPrecio()-getCostoV());
 	}
 	
-	public double costeMP() {
-		return (getPrecio()/costeM());
+	public double mcP() {
+		return (getPrecio()/mc());
 	}
 	
 	public double utilidadUnitaria() {
-		return (costeM()*getCantidades());
+		return (mc()*getCantidades());
 	}
 	
-	public double mcTotal() {
-		return getCantidades()*getPrecio();
-	}
+	
 	
 	
 }
