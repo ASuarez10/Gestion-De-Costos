@@ -125,8 +125,20 @@ public class Empresa {
 		return getCostoF()/mcPonderadoP();
 	}
 	
+	public double  UtilidadPlaneada(double Utilidad) { // devuelve las unidades necesarias para obtener la utilidad planeada
+		return (getCostoF()+Utilidad)/mcPonderadoP();
+	}
 	
+	public double  UtilidadPlaneadaInv(double x) { // devuelve la utilidad obtenida segun una cantidad
+		return (x*mcPonderado())-getCostoF();
+	}
 	
+	public double MS(double ventasCant) {
+		return ventasCant-puntoQ();
+	}
 	
+	public double MSP(double ventas) {
+		return ventas-puntoQP();
+	}
 	
 }
