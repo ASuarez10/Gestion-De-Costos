@@ -20,16 +20,16 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="164.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
-      <TextField layoutX="277.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
-      <TextField layoutX="391.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
-      <TextField layoutX="164.0" layoutY="168.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="precioVenta" layoutX="164.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="costoVariable" layoutX="277.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="costosFijos" layoutX="391.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="cantidadesVendidas" layoutX="164.0" layoutY="168.0" prefHeight="25.0" prefWidth="91.0" />
       <Label layoutX="164.0" layoutY="78.0" prefHeight="17.0" prefWidth="91.0" text="Precio de venta" />
       <Label layoutX="277.0" layoutY="78.0" prefHeight="17.0" prefWidth="91.0" text="Costo variable" />
       <Label layoutX="391.0" layoutY="78.0" prefHeight="17.0" prefWidth="91.0" text="Costos fijos" />
       <Label layoutX="155.0" layoutY="143.0" prefHeight="17.0" prefWidth="110.0" text="Cantidades vendidas" />
       <Button layoutX="503.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Guardar" />
-      <TextField layoutX="277.0" layoutY="168.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="crecimiento" layoutX="277.0" layoutY="168.0" prefHeight="25.0" prefWidth="91.0" />
       <Label layoutX="277.0" layoutY="143.0" prefHeight="17.0" prefWidth="98.0" text="\% de crecimiento" />
       <Label layoutX="10.0" layoutY="245.0" prefHeight="27.0" prefWidth="143.0" text="Datos generados:">
          <font>
@@ -38,20 +38,20 @@
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6e7e8d" height="154.0" layoutX="161.0" layoutY="226.0" stroke="BLACK" strokeType="INSIDE" width="329.0" />
       <Label layoutX="391.0" layoutY="143.0" prefHeight="17.0" prefWidth="91.0" text="Utilidad meta" />
-      <TextField layoutX="391.0" layoutY="168.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="utilidadMeta" layoutX="391.0" layoutY="168.0" prefHeight="25.0" prefWidth="91.0" />
       <Line endX="4.0" endY="41.0" layoutX="296.0" layoutY="299.0" startX="4.0" startY="-73.0" />
       <Line endX="4.0" endY="41.5" layoutX="397.0" layoutY="294.0" startX="4.0" startY="-68.0" />
       <Line endX="203.0" endY="22.0" layoutX="287.0" layoutY="315.0" startX="-126.0" startY="22.0" />
       <Line endX="203.0" endY="22.0" layoutX="287.0" layoutY="284.0" startX="-126.0" startY="22.0" />
       <Label layoutX="164.0" layoutY="353.0" prefHeight="17.0" prefWidth="157.0" text="Unidades para utilidad meta:" />
-      <Label layoutX="323.0" layoutY="353.0" prefHeight="17.0" prefWidth="157.0" />
+      <Label fx:id="unidadesMeta" layoutX="323.0" layoutY="353.0" prefHeight="17.0" prefWidth="157.0" />
       <Label layoutX="164.0" layoutY="306.0" prefHeight="25.0" prefWidth="122.0" text="Utilidad según planes " />
       <Line endX="203.0" endY="22.0" layoutX="284.0" layoutY="250.0" startX="-123.0" startY="22.0" />
       <Label layoutX="164.0" layoutY="280.0" prefHeight="25.0" prefWidth="134.0" text="Utilidad operativa actual " />
-      <Label layoutX="301.0" layoutY="280.0" prefHeight="25.0" prefWidth="98.0" />
-      <Label layoutX="301.0" layoutY="306.0" prefHeight="25.0" prefWidth="98.0" />
-      <Label layoutX="399.0" layoutY="280.0" prefHeight="25.0" prefWidth="91.0" />
-      <Label layoutX="399.0" layoutY="306.0" prefHeight="25.0" prefWidth="91.0" />
+      <Label fx:id="uoPorcentaje" layoutX="301.0" layoutY="280.0" prefHeight="25.0" prefWidth="98.0" />
+      <Label fx:id="upPorcentaje" layoutX="301.0" layoutY="306.0" prefHeight="25.0" prefWidth="98.0" />
+      <Label fx:id="uoPesos" layoutX="399.0" layoutY="280.0" prefHeight="25.0" prefWidth="91.0" />
+      <Label fx:id="upPesos" layoutX="399.0" layoutY="306.0" prefHeight="25.0" prefWidth="91.0" />
       <Label layoutX="301.0" layoutY="231.0" prefHeight="40.0" prefWidth="98.0" text="En porcentaje">
          <font>
             <Font size="15.0" />

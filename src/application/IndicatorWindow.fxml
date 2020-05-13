@@ -47,7 +47,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="230.0" layoutY="53.0" prefHeight="48.0" prefWidth="116.0">
+      <Label fx:id="equilibrioDinero" layoutX="230.0" layoutY="53.0" prefHeight="48.0" prefWidth="132.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -57,7 +57,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="230.0" layoutY="135.0" prefHeight="48.0" prefWidth="116.0">
+      <Label fx:id="contribucionDinero" layoutX="230.0" layoutY="135.0" prefHeight="48.0" prefWidth="116.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -68,34 +68,34 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="238.0" layoutY="301.0" prefHeight="35.0" prefWidth="186.0">
+      <Label fx:id="apalancamiento" layoutX="238.0" layoutY="301.0" prefHeight="35.0" prefWidth="186.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="362.0" layoutY="219.0" prefHeight="48.0" prefWidth="116.0">
+      <Label fx:id="seguridadUnidades" layoutX="362.0" layoutY="219.0" prefHeight="48.0" prefWidth="116.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="477.0" layoutY="135.0" prefHeight="48.0" prefWidth="116.0">
+      <Label fx:id="contribucionPorcentaje" layoutX="477.0" layoutY="135.0" prefHeight="48.0" prefWidth="116.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="477.0" layoutY="219.0" prefHeight="48.0" prefWidth="116.0">
+      <Label fx:id="seguridadPorcentaje" layoutX="477.0" layoutY="219.0" prefHeight="48.0" prefWidth="116.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="372.0" layoutY="63.0" prefHeight="48.0" prefWidth="116.0">
+      <Label fx:id="equilibrioUnidades" layoutX="362.0" layoutY="51.0" prefHeight="48.0" prefWidth="116.0">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#656565" height="82.0" layoutX="362.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" width="116.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#656565" height="82.0" layoutX="478.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" width="125.0" />
-      <Label layoutX="230.0" layoutY="219.0" prefHeight="48.0" prefWidth="125.0">
+      <Label fx:id="seguridadDinero" layoutX="230.0" layoutY="219.0" prefHeight="48.0" prefWidth="125.0">
          <font>
             <Font size="18.0" />
          </font>

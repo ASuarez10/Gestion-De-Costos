@@ -8,10 +8,24 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class MainWindowController {
     
+	@FXML private TextField precioVenta;
+	@FXML private TextField costoVariable;
+	@FXML private TextField costosFijos;
+	@FXML private TextField cantidadesVendidas;
+	@FXML private TextField crecimiento;
+	@FXML private TextField utilidadMeta;
+	@FXML private Label uoPorcentaje;
+	@FXML private Label uoPesos;
+	@FXML private Label upPorcentaje;
+	@FXML private Label upPesos;
+	@FXML private Label unidadesMeta;
+	
     @FXML
     void seeIndicator(ActionEvent event) {
     	try {

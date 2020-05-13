@@ -7,10 +7,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class IndicatorWindowController {
 
+	@FXML private Label equilibrioDinero;
+	@FXML private Label equilibrioUnidades;
+	@FXML private Label contribucionDinero;
+	@FXML private Label contribucionPorcentaje;
+	@FXML private Label seguridadDinero;
+	@FXML private Label seguridadUnidades;
+	@FXML private Label seguridadPorcentaje;
+	@FXML private Label apalancamiento;
+	
 	@FXML
 	void back(ActionEvent event) {
 		try {
