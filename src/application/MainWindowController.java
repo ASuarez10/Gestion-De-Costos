@@ -49,7 +49,7 @@ public class MainWindowController {
 			Parent root = (Parent) loader.load();
 			root.getStylesheets().add("application.css");// CSS
 			GraphicsWindowController nc = loader.getController();
-			nc.graficar(100000.0/1000, 6.0, 12.0/1000);
+			nc.graficar(240000.0, 6.0, 12.0);
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			stage.setScene(new Scene(root));
 

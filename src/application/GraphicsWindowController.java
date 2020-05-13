@@ -12,9 +12,13 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class GraphicsWindowController {
+	
+	@FXML private Label equilibrio;
+	private double equilibrio2;
 	
 	//Primera funcion
 	@FXML private LineChart<Double, Double> graph;
@@ -41,7 +45,11 @@ public class GraphicsWindowController {
 		}
 	}
 	
-	private void pintarGrafica (int min, int max, double cfijo, double cvariable, double ingresos){
+	private void pintarGrafica (int min, double max, double cfijo, double cvariable, double ingresos){
+		
+		
+		
+		equilibrio.setText("Punto de equilibrio: " + equilibrio2);
         
         ObservableList<XYChart.Series<Double, Double>> lineChartData = FXCollections.observableArrayList();
         ObservableList<XYChart.Series<Double, Double>> lineChartData2 = FXCollections.observableArrayList();
@@ -52,7 +60,9 @@ public class GraphicsWindowController {
         series.setName("f("+cfijo+"+"+cvariable+"X)");
         series2.setName("f("+ingresos+"X)");
         
-        for (double i = min; i<max; i=i+0.1){
+        double multiplicador = cfijo/1000;
+        
+        for (double i = min; i<max; i=i+multiplicador){
             series.getData().add(new XYChart.Data<Double, Double>(i, cfijo+(cvariable*i)));
             series2.getData().add(new XYChart.Data<Double, Double>(i, ingresos*i));
         }
@@ -71,7 +81,8 @@ public class GraphicsWindowController {
     }
 	
 	public void graficar(double cfijo, double cvariable, double ingresos) {
-        pintarGrafica(0, 100, cfijo, cvariable, ingresos);  
+		equilibrio2 = cfijo/(ingresos-cvariable);
+        pintarGrafica(0, (equilibrio2*2), cfijo, cvariable, ingresos);  
     }
 	
 }//final
