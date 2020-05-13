@@ -10,9 +10,8 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GraphicsWindowController">
    <children>
-      <Button layoutX="14.0" layoutY="507.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="38.0" prefWidth="79.0" text="Volver" />
       <Line endX="-6.0" endY="431.0" layoutX="388.0" layoutY="56.0" startX="-6.0" startY="-55.0" />
-      <LineChart fx:id="graph" layoutX="-1.0" layoutY="-2.0" prefHeight="546.0" prefWidth="384.0">
+      <LineChart fx:id="graph" layoutX="-1.0" layoutY="-2.0" prefHeight="546.0" prefWidth="775.0">
          <xAxis>
             <NumberAxis label="x" tickUnit="1.0" fx:id="x" />
          </xAxis>
@@ -20,15 +19,8 @@
             <NumberAxis label="f(x)" side="LEFT" tickUnit="1.0" />
          </yAxis>
       </LineChart>
-      <LineChart fx:id="graph2" layoutX="383.0" layoutY="-2.0" prefHeight="546.0" prefWidth="384.0">
-         <xAxis>
-            <NumberAxis label="x" tickUnit="1.0" fx:id="x2" />
-         </xAxis>
-         <yAxis>
-            <NumberAxis label="f(x)" side="LEFT" tickUnit="1.0" />
-         </yAxis>
-      </LineChart>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#abb0b5" height="25.0" layoutX="275.0" layoutY="514.0" stroke="BLACK" strokeType="INSIDE" width="223.0" />
       <Label fx:id="equilibrio" layoutX="282.0" layoutY="518.0" prefHeight="17.0" prefWidth="211.0" text="Punto de equilibrio: " />
+      <Button layoutY="510.0" mnemonicParsing="false" onAction="#back" prefHeight="33.0" prefWidth="80.0" text="Volver" />
    </children>
 </Pane>

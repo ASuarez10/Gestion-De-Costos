@@ -11,52 +11,6 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class MainWindowController {
-	
-    @FXML
-	void seeProducts(ActionEvent event) {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("ProductWindow.fxml"));
-			Parent root = (Parent) loader.load();
-			root.getStylesheets().add("application.css");// CSS
-			ProductWindowController nc = loader.getController();
-			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			stage.setScene(new Scene(root));
-
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-	}
-    
-    @FXML
-    void seeUtility(ActionEvent event) {
-    	try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("UtilityWindow.fxml"));
-			Parent root = (Parent) loader.load();
-			root.getStylesheets().add("application.css");// CSS
-			UtilityWindowController nc = loader.getController();
-			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			stage.setScene(new Scene(root));
-
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-    }
-    
-    @FXML
-    void seeGraphics(Event event) {
-    	try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("GraphicsWindow.fxml"));
-			Parent root = (Parent) loader.load();
-			root.getStylesheets().add("application.css");// CSS
-			GraphicsWindowController nc = loader.getController();
-			nc.graficar(240000.0, 6.0, 12.0);
-			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			stage.setScene(new Scene(root));
-
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-    }
     
     @FXML
     void seeIndicator(ActionEvent event) {
@@ -73,18 +27,4 @@ public class MainWindowController {
 		}
     }
     
-    @FXML
-    void seeApalancamiento(ActionEvent event) {
-    	try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("ApalancamientoWindow.fxml"));
-			Parent root = (Parent) loader.load();
-			root.getStylesheets().add("application.css");// CSS
-			ApalancamientoWindowController nc = loader.getController();
-			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-			stage.setScene(new Scene(root));
-
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
-    }
 }//final

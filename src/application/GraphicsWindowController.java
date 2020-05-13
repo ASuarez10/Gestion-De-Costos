@@ -24,19 +24,14 @@ public class GraphicsWindowController {
 	@FXML private LineChart<Double, Double> graph;
     @FXML private NumberAxis x;
     @FXML private NumberAxis y;
-    
-    //Segunda funcion
-    @FXML private LineChart<Double, Double> graph2;
-    @FXML private NumberAxis x2;
-    @FXML private NumberAxis y2;
 	
-	@FXML
-	void backToMenu(ActionEvent event) {
+    @FXML
+	void back(ActionEvent event) {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("IndicatorWindow.fxml"));
 			Parent root = (Parent) loader.load();
 			root.getStylesheets().add("application.css");// CSS
-			MainWindowController nc = loader.getController();
+			IndicatorWindowController nc = loader.getController();
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			stage.setScene(new Scene(root));
 
@@ -52,7 +47,6 @@ public class GraphicsWindowController {
 		equilibrio.setText("Punto de equilibrio: " + equilibrio2);
         
         ObservableList<XYChart.Series<Double, Double>> lineChartData = FXCollections.observableArrayList();
-        ObservableList<XYChart.Series<Double, Double>> lineChartData2 = FXCollections.observableArrayList();
         
         LineChart.Series<Double, Double> series = new LineChart.Series<Double, Double>();
         LineChart.Series<Double, Double> series2 = new LineChart.Series<Double, Double>();
@@ -68,16 +62,13 @@ public class GraphicsWindowController {
         }
         
         lineChartData.add(series);
-        lineChartData2.add(series2);
+        lineChartData.add(series2);
 
         graph.setCreateSymbols(false);
-        graph2.setCreateSymbols(false);
         
         
         graph.setData(lineChartData);
         graph.createSymbolsProperty();
-        graph2.setData(lineChartData2);
-        graph2.createSymbolsProperty();
     }
 	
 	public void graficar(double cfijo, double cvariable, double ingresos) {
