@@ -151,12 +151,16 @@ public class Empresa {
 		return (x * mcPonderado()) - getCostoF();
 	}
 
-	public double MS() {
+	public double MS() { // Margen de seguridad en cantidades
 		return volumenVentas() - puntoQ();
 	}
 
-	public double MSP() {
+	public double MSP() { // Margen de seguridad en precio
 		return volumenVentasP() - puntoQP();
+	}
+	
+	public double RazonMS() { // Margen de seguridad en procentaje
+		return MS()/volumenVentas();
 	}
 
 	public void addProducto(Producto nuevo) {
