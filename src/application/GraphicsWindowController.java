@@ -57,7 +57,7 @@ public class GraphicsWindowController {
         series.setName("f("+cfijo+"+"+cvariable+"X)");
         series2.setName("f("+ingresos+"X)");
         
-        double multiplicador = cfijo/1000;
+        double multiplicador = cfijo/100;
         
         for (double i = min; i<max; i=i+multiplicador){
             series.getData().add(new XYChart.Data<Double, Double>(i, cfijo+(cvariable*i)));
@@ -76,7 +76,7 @@ public class GraphicsWindowController {
 	
 	public void graficar(double cfijo, double cvariable, double ingresos) {
 		equilibrio2 = cfijo/(ingresos-cvariable);
-        pintarGrafica(0, (equilibrio2*2), cfijo, cvariable, ingresos);  
+        pintarGrafica(0, (equilibrio2), cfijo, cvariable, ingresos);  
     }
 
 	public Empresa getEmpresa() {

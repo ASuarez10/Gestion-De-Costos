@@ -118,7 +118,7 @@ public class Empresa {
 		return apalancamiento() * (crecimiento/100);
 	}
 
-	public double mcPonderado() {
+	public double mcPonderado() {//Este es en pesos
 		double aux = 0;
 		for (int i = 0; i < getProductos().size(); i++) {
 			aux += getProductos().get(i).mc() * mixVentasU().get(i);
@@ -126,7 +126,7 @@ public class Empresa {
 		return aux;
 	}
 
-	public double mcPonderadoP() {
+	public double mcPonderadoP() {//este es en porcentaje
 		double aux = 0;
 		for (int i = 0; i < getProductos().size(); i++) {
 			aux += getProductos().get(i).mcP() * mixVentasDinero().get(i);
@@ -142,9 +142,9 @@ public class Empresa {
 		return getCostoF() / mcPonderadoP();
 	}
 
-	public double UtilidadPlaneada(double utilidad) { // devuelve las unidades necesarias para obtener la utilidad
+	public double UtilidadPlaneada() { // devuelve las unidades necesarias para obtener la utilidad
 														// planeada
-		return (getCostoF() + utilidad) / mcPonderadoP();
+		return (getCostoF() + utilidadMeta) / mcPonderadoP();
 	}
 
 	public double UtilidadPlaneadaInv(double x) { // devuelve la utilidad obtenida segun una cantidad
@@ -167,4 +167,11 @@ public class Empresa {
 		return utilidadActual()+(utilidadActual()*utilidadProyectada());
 	}
 
+	public double precioPonderado() {
+		return (mcPonderado()/mcPonderadoP())*100;
+	}
+	
+	public double costoVariablePonderado() {
+		return precioPonderado()-mcPonderado();
+	}
 }// final

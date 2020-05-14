@@ -49,7 +49,7 @@ public class IndicatorWindowController {
 				root.getStylesheets().add("application.css");// CSS
 				GraphicsWindowController nc = loader.getController();
 				nc.setEmpresa(empresa);
-				nc.graficar(240000.0, 6.0, 12.0);
+				nc.graficar(empresa.getCostoF(), empresa.costoVariablePonderado(), empresa.precioPonderado());
 				Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 				stage.setScene(new Scene(root));
 
@@ -72,8 +72,8 @@ public class IndicatorWindowController {
 		seguridadDinero.setText(" "+ empresa.MSP());
 		seguridadPorcentaje.setText("Esto falta");
 		seguridadUnidades.setText(" "+ empresa.MS());
-		contribucionDinero.setText(" "+ empresa.mcPonderadoP());
-		contribucionPorcentaje.setText(" "+ empresa.mcPonderado());
+		contribucionDinero.setText(" "+ empresa.mcPonderado());
+		contribucionPorcentaje.setText(" "+ empresa.mcPonderadoP());
 		apalancamiento.setText(" "+ empresa.apalancamiento());
 	}
 	 

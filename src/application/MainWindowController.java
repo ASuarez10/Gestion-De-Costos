@@ -109,6 +109,7 @@ public class MainWindowController {
     		uoPesos.setText(" "+ empresa.utilidadActual());
     		upPesos.setText(" "+ empresa.utilidadPlanesPesos());
     		upPorcentaje.setText(" "+ empresa.utilidadProyectada());
+    		unidadesMeta.setText(" "+ empresa.UtilidadPlaneada());
     	}
     }
 
