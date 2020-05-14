@@ -14,12 +14,13 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import src.Empresa;
 
 public class GraphicsWindowController {
 	
 	@FXML private Label equilibrio;
 	private double equilibrio2;
-	
+	private Empresa empresa;
 	//Primera funcion
 	@FXML private LineChart<Double, Double> graph;
     @FXML private NumberAxis x;
@@ -27,11 +28,13 @@ public class GraphicsWindowController {
 	
     @FXML
 	void back(ActionEvent event) {
-		try {
+    	try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("IndicatorWindow.fxml"));
 			Parent root = (Parent) loader.load();
 			root.getStylesheets().add("application.css");// CSS
 			IndicatorWindowController nc = loader.getController();
+			nc.setEmpresa(empresa);
+			nc.generarDatos();
 			Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 			stage.setScene(new Scene(root));
 
@@ -75,5 +78,15 @@ public class GraphicsWindowController {
 		equilibrio2 = cfijo/(ingresos-cvariable);
         pintarGrafica(0, (equilibrio2*2), cfijo, cvariable, ingresos);  
     }
+
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+	}
+	
+	
 	
 }//final

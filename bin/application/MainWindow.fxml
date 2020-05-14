@@ -10,7 +10,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
    <children>
-      <Label layoutX="130.0" prefHeight="72.0" prefWidth="341.0" text="Listado de productos">
+      <Label layoutX="131.0" prefHeight="72.0" prefWidth="341.0" text="Listado de productos">
          <font>
             <Font size="36.0" />
          </font>
@@ -20,15 +20,15 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="precioVenta" layoutX="164.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="precioVenta" layoutX="391.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
       <TextField fx:id="costoVariable" layoutX="277.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
-      <TextField fx:id="costosFijos" layoutX="391.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
+      <TextField fx:id="costosFijos" layoutX="164.0" layoutY="104.0" prefHeight="25.0" prefWidth="91.0" />
       <TextField fx:id="cantidadesVendidas" layoutX="164.0" layoutY="168.0" prefHeight="25.0" prefWidth="91.0" />
-      <Label layoutX="164.0" layoutY="78.0" prefHeight="17.0" prefWidth="91.0" text="Precio de venta" />
+      <Label layoutX="391.0" layoutY="78.0" prefHeight="17.0" prefWidth="91.0" text="Precio de venta" />
       <Label layoutX="277.0" layoutY="78.0" prefHeight="17.0" prefWidth="91.0" text="Costo variable" />
-      <Label layoutX="391.0" layoutY="78.0" prefHeight="17.0" prefWidth="91.0" text="Costos fijos" />
+      <Label layoutX="155.0" layoutY="78.0" prefHeight="17.0" prefWidth="110.0" text="Costos fijos totales" />
       <Label layoutX="155.0" layoutY="143.0" prefHeight="17.0" prefWidth="110.0" text="Cantidades vendidas" />
-      <Button layoutX="503.0" layoutY="131.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="91.0" text="Guardar" />
+      <Button layoutX="503.0" layoutY="131.0" mnemonicParsing="false" onAction="#guardarProducto" prefHeight="25.0" prefWidth="91.0" text="Guardar" />
       <TextField fx:id="crecimiento" layoutX="277.0" layoutY="168.0" prefHeight="25.0" prefWidth="91.0" />
       <Label layoutX="277.0" layoutY="143.0" prefHeight="17.0" prefWidth="98.0" text="\% de crecimiento" />
       <Label layoutX="10.0" layoutY="245.0" prefHeight="27.0" prefWidth="143.0" text="Datos generados:">
@@ -63,6 +63,6 @@
          </font>
       </Label>
       <Button layoutX="506.0" layoutY="334.0" mnemonicParsing="false" onAction="#seeIndicator" prefHeight="40.0" prefWidth="91.0" text="Indicadores" />
-      <Button layoutX="503.0" layoutY="260.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="91.0" text="Generar" />
+      <Button layoutX="503.0" layoutY="260.0" mnemonicParsing="false" onAction="#generar" prefHeight="40.0" prefWidth="91.0" text="Generar" />
    </children>
 </Pane>
