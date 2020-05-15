@@ -62,9 +62,25 @@ public class Empresa {
 		return cantidad;
 	}
 
+	
+	
+	
+	
+	
+
 	public double utilidadActual() {
 		return volumenVentasP() - getCostoF();
 	}
+	
+	public double utilidadPlanesPesos() {
+		return utilidadActual()+(utilidadActual()*utilidadProyectada());
+	}
+	
+	
+	
+	
+	
+	
 
 	public double utilidadActualP() {
 		return utilidadActual() / ventasT();
@@ -165,10 +181,6 @@ public class Empresa {
 
 	public void addProducto(Producto nuevo) {
 		productos.add(nuevo);
-	}
-
-	public double utilidadPlanesPesos() {//TODO
-		return utilidadActual()+(utilidadActual()*utilidadProyectada());
 	}
 
 	public double precioPonderado() {

@@ -70,7 +70,7 @@ public class IndicatorWindowController {
 		equilibrioDinero.setText(" "+ empresa.puntoQP());
 		equilibrioUnidades.setText(" "+ empresa.puntoQ());
 		seguridadDinero.setText(" "+ empresa.MSP());
-		seguridadPorcentaje.setText("Esto falta");
+		seguridadPorcentaje.setText(" "+ empresa.RazonMS());
 		seguridadUnidades.setText(" "+ empresa.MS());
 		contribucionDinero.setText(" "+ empresa.mcPonderado());
 		contribucionPorcentaje.setText(" "+ empresa.mcPonderadoP());
