@@ -62,25 +62,13 @@ public class Empresa {
 		return cantidad;
 	}
 
-	
-	
-	
-	
-	
-
 	public double utilidadActual() {
 		return volumenVentasP() - getCostoF();
 	}
-	
+
 	public double utilidadPlanesPesos() {
-		return utilidadActual()+(utilidadActual()*utilidadProyectada());
+		return utilidadActual() + (utilidadActual() * utilidadProyectada());
 	}
-	
-	
-	
-	
-	
-	
 
 	public double utilidadActualP() {
 		return utilidadActual() / ventasT();
@@ -131,10 +119,10 @@ public class Empresa {
 	}
 
 	public double utilidadProyectada() {
-		return apalancamiento() * (crecimiento/100);
+		return apalancamiento() * (crecimiento / 100);
 	}
 
-	public double mcPonderado() {//Este es en pesos
+	public double mcPonderado() {// Este es en pesos
 		double aux = 0;
 		for (int i = 0; i < getProductos().size(); i++) {
 			aux += getProductos().get(i).mc() * mixVentasU().get(i);
@@ -142,7 +130,7 @@ public class Empresa {
 		return aux;
 	}
 
-	public double mcPonderadoP() {//este es en porcentaje
+	public double mcPonderadoP() {// este es en porcentaje
 		double aux = 0;
 		for (int i = 0; i < getProductos().size(); i++) {
 			aux += getProductos().get(i).mcP() * mixVentasDinero().get(i);
@@ -159,8 +147,8 @@ public class Empresa {
 	}
 
 	public double UtilidadPlaneada() { // devuelve las unidades necesarias para obtener la utilidad
-														// planeada
-		return (getCostoF() + utilidadMeta) / mcPonderadoP();
+										// planeada
+		return (getCostoF() + utilidadMeta) / mcPonderado();
 	}
 
 	public double UtilidadPlaneadaInv(double x) { // devuelve la utilidad obtenida segun una cantidad
@@ -174,9 +162,9 @@ public class Empresa {
 	public double MSP() { // Margen de seguridad en precio
 		return volumenVentasP() - puntoQP();
 	}
-	
+
 	public double RazonMS() { // Margen de seguridad en procentaje
-		return MS()/volumenVentas();
+		return MS() / volumenVentas();
 	}
 
 	public void addProducto(Producto nuevo) {
@@ -184,10 +172,10 @@ public class Empresa {
 	}
 
 	public double precioPonderado() {
-		return (mcPonderado()/mcPonderadoP())*100;
+		return (mcPonderado() * mcPonderadoP());
 	}
-	
+
 	public double costoVariablePonderado() {
-		return precioPonderado()-mcPonderado();
+		return precioPonderado() - mcPonderado();
 	}
 }// final

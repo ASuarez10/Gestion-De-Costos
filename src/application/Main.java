@@ -18,6 +18,7 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			MainWindowController nc = loader.getController();
+			nc.onlyNumbers();
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Analisis de gestion");
 			primaryStage.show();
