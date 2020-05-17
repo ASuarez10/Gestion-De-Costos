@@ -11,6 +11,8 @@ public class Empresa {
 	public Empresa(double costoF, double crecimiento, double utilidadMeta) {
 		super();
 		this.costoF = costoF;
+		this.crecimiento = crecimiento;
+		this.utilidadMeta = utilidadMeta;
 		productos = new ArrayList<Producto>();
 	}
 
